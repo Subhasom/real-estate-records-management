@@ -1,0 +1,22 @@
+{
+  "name": "real-estate-records-management",
+  "description": "An instant website for real estate agencies.",
+  "keywords": [
+    "realtor","real estate", "property management", "cms",
+    "rails", "proptech", "opensource"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate pwb:db:seed pwb:db:seed_pages property_web_scraper:db:seed"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "cloudinary:starter"
+  ],
+  "env": {
+    "LANG": "en_US.UTF-8",
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
+    "RAILS_LOG_TO_STDOUT": "enabled",
+    "RAILS_SERVE_STATIC_FILES": "enabled"
+  }
+}
